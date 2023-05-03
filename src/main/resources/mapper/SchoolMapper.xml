@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.collegeentranceexaminationvolunteerrecommendation.mapper.SchoolMapper">
+    <resultMap id="BaseResulMap" type="com.example.collegeentranceexaminationvolunteerrecommendation.pojo.School">
+        <id column="school_id" property="schoolId" />
+        <result column="school_name" property="schoolName"/>
+        <result column="school_type" property="schoolType"/>
+        <result column="school_level" property="schoolLevel"/>
+    </resultMap>
+    <select id="allSchool" resultMap="BaseResulMap">
+        select * from school where school_id=1;
+    </select>
+</mapper>
